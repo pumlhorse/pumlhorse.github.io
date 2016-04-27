@@ -1,8 +1,10 @@
 ---
 title: Pumlhorse
-layout: singleBox
+layout: default
 ---
 
+<div class="col-md-12">
+<div class="box">
 
 # Pumlhorse
 Pumlhorse is a scripting tool for quickly creating powerful, readable, and reusable scripts.
@@ -30,3 +32,6 @@ After installing Node.js, run the following command:
 `npm install -g pumlhorse`
     
 See the documentation for more information
+
+</div>
+</div>
