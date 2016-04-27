@@ -5,8 +5,6 @@ layout: reference
 
 # Pumlhorse API
 
-{:toc}
-
 ## Module API
 
 Declare a module:
@@ -68,7 +66,7 @@ steps:
         val3: true    
 ```
 
-```JavaScript
+```javascript
 pumlhorse.module("customModule")
     .function("getWholeObject", getWholeObject, {
         passAsObject: true    
