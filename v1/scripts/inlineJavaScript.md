@@ -29,6 +29,7 @@ steps:
 ```
 
 For those familiar with JavaScript syntax, these declarations are equivalent to:
+
 ```javascript
 var getMyInfo = new Function("return { name: 'John Smith', age: 25 }")
 var logMyInfo = new Function("age", "name", "console.log('My name is ' + name + ' and I am ' + age + ' years old')")

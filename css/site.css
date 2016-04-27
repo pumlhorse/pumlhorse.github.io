@@ -70,25 +70,25 @@ a:hover {
 	position: relative;
 }
 
-#sideNav,
-#sideNav a {
+.sideNav,
+.sideNav a {
 	color: #f5f5f5;
 }
 
-#sideNav > ul {
+.sideNav > ul {
 	padding-left: 0	
 }
 
-#sideNav ul {
+.sideNav ul {
 	list-style: none;
 }
 
-#sideNav .folder:before {
+.sideNav .folder:before {
 	content: '\f07c\00a0';
 	font-family: FontAwesome;
 }
 
-#sideNav .page:before {
+.sideNav .page:before {
 	content: '\f15c\00a0';
 	font-family: FontAwesome;
 }

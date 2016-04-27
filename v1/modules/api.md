@@ -2,7 +2,8 @@
 title: Pumlhorse Module API
 layout: reference
 ---
-#Pumlhorse API
+
+# Pumlhorse API
 
 {:toc}
 
@@ -23,7 +24,7 @@ Provides functions to register a Pumlhorse module
 * functionDeclaration (`FunctionDeclaration`)
 * functionOptions (`FunctionOptions`) - _optional_
 
-###FunctionDeclaration
+### FunctionDeclaration
 
 A function declaration can be a reference to the function implementation or an array.
 
@@ -48,14 +49,14 @@ the user calling `functionWithArray` in a Pumlhorse script will use `parameter1`
 will be assigned to `val1` and `val2` respectively.
 
 
-###FunctionOptions 
+### FunctionOptions 
 
 All `FunctionOptions` properties are optional. 
 
 * `passAsObject` - If true, all parameters passed to the function will be combined into a single object. For instance, the `value` function
 uses this.
 
-```yaml
+```YAML
 name: Use passAsObject
 modules:
   - customModule
@@ -67,7 +68,7 @@ steps:
         val3: true    
 ```
 
-```javascript
+```JavaScript
 pumlhorse.module("customModule")
     .function("getWholeObject", getWholeObject, {
         passAsObject: true    
