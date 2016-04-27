@@ -1,3 +1,3 @@
 name: Pumlhorse
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge

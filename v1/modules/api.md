@@ -28,7 +28,7 @@ Provides functions to register a Pumlhorse module
 
 A function declaration can be a reference to the function implementation or an array.
 
-{% highlight javascript %}
+```javascript
 pumlhorse.module("customModule")
     .function("myFunction", function () { return "Declared inline" })
     .function("myFunction2", myFunction2)
@@ -41,7 +41,7 @@ pumlhorse.module("customModule")
     function anotherFunction(val1, val2) {
         return "The parameter names don't have to match"
     }
-{% endhighlight %}
+```
 
 The `functionWithArray` declaration should be familiar to angular developers. It must contain names for all parameter in order, followed by the function implementation.
 The names do not need to match, which allows you to minify your modules, if needed. In the above case,
@@ -56,7 +56,7 @@ All `FunctionOptions` properties are optional.
 * `passAsObject` - If true, all parameters passed to the function will be combined into a single object. For instance, the `value` function
 uses this.
 
-```YAML
+```yaml
 name: Use passAsObject
 modules:
   - customModule
@@ -90,9 +90,10 @@ steps:
         - myName = Joseph
         - log: $myName
 ```
+
 When PumlHorse parses the repeat step, it should evaluate $loopTimes, but not steps. The parser sees the steps as an array of parameters to be passed to a function. The first inner step would be run again to assign 'Joseph' to myName, but the second step would have been evaluated before that assignment, so `$myName` would be undefined.
 
-##Using Scope
+## Using Scope
 Every function call has access to the script scope via the `this` object. This contains any variables that have been set 
 as well as all available module functions. It also contains the helper methods described later.
 
@@ -110,7 +111,7 @@ When writing custom module functions, you'll frequently want to assign `this` to
     }    
 ```
 
-##Scope Methods
+## Scope Methods
 
 The `Scope` object contains multiple methods that can help when writing custom modules.
 
@@ -145,6 +146,7 @@ accessed through the scope, but it is possible that they are stored under a cust
 namespaces.
 * `$cleanup(Function)` - This method allows you to add cleanup tasks to the script. Cleanup tasks are always run, regardless of whether all steps or previous 
 cleanup tasks succeed. Cleanup tasks also have access to scope.
+
 ```javascript
 function openDbConnection(connectionString) {
     var scope = this;
@@ -155,6 +157,7 @@ function openDbConnection(connectionString) {
     })
 }    
 ```
+
 * `$_` - Provides access to the [underscorejs](http://underscorejs.org/) helper library.
 * `$Promise` - Provides access to the [bluebirdjs](http://bluebirdjs.com/) promise library. Note that you
 are not forced to use this library for promises.
