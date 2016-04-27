@@ -3,6 +3,10 @@
 	src: url(../fonts/SHOOVN__.TTF);
 }
 
+.horsehead {
+	height: 128px;
+}
+
 .navbar {
 	margin-bottom: 0;
 	border-bottom-width: 0;
