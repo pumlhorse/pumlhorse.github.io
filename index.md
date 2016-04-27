@@ -1,6 +1,5 @@
 ---
 title: Pumlhorse
-layout: standard
 ---
 
 # Pumlhorse
