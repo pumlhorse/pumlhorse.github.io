@@ -28,7 +28,7 @@ Provides functions to register a Pumlhorse module
 
 A function declaration can be a reference to the function implementation or an array.
 
-```javascript
+{% highlight javascript %}
 pumlhorse.module("customModule")
     .function("myFunction", function () { return "Declared inline" })
     .function("myFunction2", myFunction2)
@@ -41,7 +41,7 @@ pumlhorse.module("customModule")
     function anotherFunction(val1, val2) {
         return "The parameter names don't have to match"
     }
-```
+{% endhighlight %}
 
 The `functionWithArray` declaration should be familiar to angular developers. It must contain names for all parameter in order, followed by the function implementation.
 The names do not need to match, which allows you to minify your modules, if needed. In the above case,
@@ -120,6 +120,7 @@ The `Scope` object contains multiple methods that can help when writing custom m
 If no scope is provided, the current scope is used.
 property of `FunctionOptions`
 * `$new([newStack])` - Builds a new scope based on the current scope with the values in `newStack` (optional)
+
 ```javascript
 function runInNewScope() {
     var currentScope = this;
@@ -136,6 +137,7 @@ function runInNewScope() {
         })
 }
 ```
+
 * `$emit(eventName, [eventArgs])` - Raises the 'eventName' event with the given arguments (optional). If the event does not have any subscribers, it will be ignored.
 Events can be subscribed to via the 'listen' method on the script.
 * `$module(moduleName)` - Returns the module registered with the given name (or throws an error if it hasn't been registered). Module functions can also be 
