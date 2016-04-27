@@ -6,7 +6,8 @@
                 <li><a href="https://github.com/pumlhorse">Pumlhorse on Github</a></li>
             </ul>
             <i class="fa fa-twitter"></i> <a href="http://www.twitter.com/pumlhorse" target="_blank">@@pumlhorse</a><br/>
-            &copy; <%= Time.now.year %> <a href="https://www.getrevelio.com">Revelio</a>
+            &copy; {{ site.time | date: '%Y' }} <a href="https://www.getrevelio.com">Revelio</a>
         </div>
     </div>
 </footer>
+{% include analytics.html %}
