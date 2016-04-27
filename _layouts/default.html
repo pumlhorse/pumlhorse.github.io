@@ -1,10 +1,10 @@
-<%= renderp '/head.*' %>
+{% include head.html %}
 
 <body class="standard">
-  <%= renderp '/header.*' %>
+  {% include header.html }
 
-  <%= yield %>
+  {{ content }}
 
-  <%= renderp '/footer.*' %>
+  {% include footer.html %}
 </body>
 </html>
