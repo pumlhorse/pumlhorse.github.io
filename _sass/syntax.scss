@@ -5,7 +5,7 @@
 .highlight {
     background-color: #002b36; 
     color: #93a1a1;
-    @extend %vertical-rhythm;
+    /*@extend %vertical-rhythm;*/
     .c { color: #586e75 } /* Comment */
     .err { color: #93a1a1 } /* Error */
     .g { color: #93a1a1 } /* Generic */
