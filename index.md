@@ -3,10 +3,13 @@ title: Pumlhorse
 layout: default
 ---
 
+<div class="box">
+
 # Pumlhorse
 Pumlhorse is a scripting tool for quickly creating powerful, readable, and reusable scripts.
     
 Some practical situations include:
+
 * Test cases
 * DevOps support scripts
 * Load tests
@@ -28,3 +31,5 @@ After installing Node.js, run the following command:
 `npm install -g pumlhorse`
     
 See the documentation for more information
+
+</div>

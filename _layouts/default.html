@@ -3,12 +3,18 @@
   {% include head.html %}
 
   <body>
-    <div class="container">
-      {% include header.html %}
-
+    {% include header.html %}
+    <div class="jumbotron">
+			<div class="container">
+				<h1><a href="/">pumlhorse</a></h1>
+			    <p>Powerful and readable scripts</p>
+			</div>
+		</div>
+    <div class="body container">
+      
       {{ content }}
 
-      {% include footer.html %}
     </div>
+    {% include footer.html %}
   </body>
 </html>
