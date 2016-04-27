@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    {% include head.html %}
+---
+layout: default
+---
 
-    <body class="standard">
-    {% include header.html %}
-
-    <div class="col-md-3">
-        {% include '/v1_nav.*' %}
-    </div>
-    <div class="col-md-9">
-        {{ content }}
-    </div>
-
-    {% include footer.html %}
-    </body>
-</html>
+<div class="col-md-3">
+    {% include v1_nav.html %}
+</div>
+<div class="col-md-9">
+    {{ content }}
+</div>
