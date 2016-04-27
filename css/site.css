@@ -75,6 +75,10 @@ a:hover {
 	color: #f5f5f5;
 }
 
+#sideNav > ul {
+	padding-left: 0	
+}
+
 #sideNav ul {
 	list-style: none;
 }
