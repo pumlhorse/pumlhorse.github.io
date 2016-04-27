@@ -37,8 +37,8 @@ var logMyInfo = new Function("age", "name", "console.log('My name is ' + name + 
 ##Inline expressions
 
 As shown in the "Assertions" section in the Introduction, we can use inline expressions for
-basic math operations or variable assignments. The expression is written like `${<my_expression>}`,
-replacing `<my_expression>` with the actual expression.
+basic math operations or variable assignments. The expression is written like `${my_expression}`,
+replacing `my_expression` with the actual expression.
 
 ```yaml
 name: Compute squares

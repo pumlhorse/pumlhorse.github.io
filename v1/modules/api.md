@@ -1,5 +1,6 @@
 ---
 title: Pumlhorse Module API
+layout: reference
 ---
 #Pumlhorse API
 
@@ -151,6 +152,6 @@ function openDbConnection(connectionString) {
     })
 }    
 ```
-* `$_` - Provides access to the <a href="http://underscorejs.org/" target="__blank">underscorejs</a> helper library.
-* `$Promise` - Provides access to the <a href="http://bluebirdjs.com/" target="__blank">bluebirdjs</a> promise library. Note that you
+* `$_` - Provides access to the [underscorejs](http://underscorejs.org/) helper library.
+* `$Promise` - Provides access to the [bluebirdjs](http://bluebirdjs.com/) promise library. Note that you
 are not forced to use this library for promises.
