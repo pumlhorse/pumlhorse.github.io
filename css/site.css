@@ -83,15 +83,15 @@ a:hover {
 	list-style: none;
 }
 
-.sideNav .folder:before {
-	content: ' ';
+/*.sideNav .folder:before {
+	content: '\f07c\00a0';
 	font-family: FontAwesome;
 }
 
 .sideNav .page:before {
-	content: ' ';
+	content: '\f15c\00a0';
 	font-family: FontAwesome;
-}
+}*/
 
 footer {
 	color: #f5f5f5;
