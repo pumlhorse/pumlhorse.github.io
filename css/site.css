@@ -84,12 +84,12 @@ a:hover {
 }
 
 .sideNav .folder:before {
-	content: '\f07c\00a0';
+	content: ' ';
 	font-family: FontAwesome;
 }
 
 .sideNav .page:before {
-	content: '\f15c\00a0';
+	content: ' ';
 	font-family: FontAwesome;
 }
 
