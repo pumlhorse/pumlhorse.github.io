@@ -1,0 +1,15 @@
+<%= renderp '/head.*' %>
+
+<body class="standard">
+  <%= renderp '/header.*' %>
+
+  <div class="col-md-3">
+      <%= renderp '/v1_nav.*' %>
+  </div>
+  <div class="col-md-9">
+      <%= yield %>
+  </div>
+
+  <%= renderp '/footer.*' %>
+</body>
+</html>

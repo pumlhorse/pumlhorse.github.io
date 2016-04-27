@@ -1,0 +1,40 @@
+
+<h2>Script structure</h2>
+
+<ul class="properties">
+    <li>name - string</li>
+    <li>description - string (optional)</li>
+    <li>modules - [<a href="#module">Module</a>]</li>
+    <li>functions - <a href="#functions">Functions Object</a></li>
+    <li>steps - [<a href="#step">Step</a>]</li>
+    <li>
+        <div>cleanup - [<a href="#step">Step</a>]</div>
+        <div>
+            Cleanup tasks are always run, regardless of whether any previous steps or 
+            cleanup tasks failed.
+        </div>
+    </li>
+</ul>
+
+<h2><a id="module" class="object">Module</a></h2>
+
+<h2><a id="functions" class="object">Functions Object</a></h2>
+Object containing custom functions. Function names are provided as the property key, with the value being a 
+<a href="#function">Function</a>
+
+<h2><a id="function" class="object">Function</a></h2>
+Inline JavaScript. Can be defined as a block of code, or an array containing parameter names followed by the code.
+
+<code>
+functions:
+  singleLineFunc: return { message: "this is a single line of code " }
+  multiLineFunc: > return {
+                  message: "this spans a few lines"
+               }
+  funcWithArgs:
+    - name
+    - age
+    - return "User " + name + " is " + age + " years old!"
+</code>
+
+<h2><a id="step" class="object">Step</a></h2>
