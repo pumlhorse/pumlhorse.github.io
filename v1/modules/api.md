@@ -30,7 +30,7 @@ A function declaration can be a reference to the function implementation or an a
 pumlhorse.module("customModule")
     .function("myFunction", function () { return "Declared inline" })
     .function("myFunction2", myFunction2)
-    .function("functionWithArray", ["parameter1", "parameter2", anotherFunction)
+    .function("functionWithArray", ["parameter1", "parameter2", anotherFunction])
     
     function myFunction2() {
         return "Declared elsewhere"

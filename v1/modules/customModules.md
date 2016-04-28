@@ -31,15 +31,15 @@ function myFunc2() {
 
 Now you need to place your file someplace where pumlhorse can reach it.
  * If you are using an absolute or relative path, you can place it anywhere you would like
- * If you are using a node module with a single file, you can simply place it in a `puml_modules` folder along the resolution path.
+ * If you are using a node module with a single file, you can simply place it in a `node_modules` folder along the resolution path.
  * If you are using a node module with multiple files, you will need to place it in its own folder with whatever name you
- want for the module. You will also need to create a package.json for it.
+ want for the module. You will also need to create a `package.json` for it.
    * For example, we want to create "cool_module", so we put our code into `app.js`.
    * We create a folder `cool_module` and move `app.js` into it.
    * `app.js` needs `library.js`, so we move that into the new folder as well.
    * We then create a file `package.json` in the same folder. In `package.json`, 
    we write the following: `{ "main": "app.js" }`
-   * Finally, we move the `cool_module` folder into a `puml_modules` folder in the same directory
+   * Finally, we move the `cool_module` folder into a `node_modules` folder in the same directory
    as our scripts.
 
 ### Directory structure
@@ -53,13 +53,13 @@ pumlhorse_scripts
 │   │   login_test2.puml
 │   │   login_test3.puml
 │   │
-│   └───puml_modules
+│   └───node_modules
 │       └───login_helpers
 │               app.js
                 library.js
 │               package.json
 │
-├───puml_modules
+├───node_modules
 │       site_helpers.js
 │
 └───user_management
