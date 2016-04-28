@@ -12,7 +12,6 @@ To write a module, create a new JavaScript file and copy your functions there.
 Then register your module with Pumlhorse as such:
 
 ```javascript
-
 var mod = pumlhorse.module("myModule")
     .function("myFunc", myFunc)
     .function("myFunc2", myFunc2)

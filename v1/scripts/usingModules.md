@@ -81,4 +81,4 @@ steps:
   - tw.postUpdate: I'm using Twitter too!
 ```
 
-For information on creating custom modules, see the [customModules](../modules/customModules) page
+For information on creating custom modules, see the [custom modules](../modules/customModules) page

@@ -2,8 +2,9 @@
 title: Filters
 layout: reference
 ---
-#Filters
+# Filters
 Filters can handle the following events:
+
  - `onSessionStarting(): Promise<bool>`
    - Occurs after all files have been detected, but before any scripts have been loaded
  - `onScriptStarting(script: Script): Promise<bool>`

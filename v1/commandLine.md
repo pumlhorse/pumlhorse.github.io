@@ -2,11 +2,12 @@
 title: Command Line
 layout: reference
 ---
-#Command-line Interface
+
+# Command-line Interface
 
 Pumlhorse supplies a command-line interface (CLI) for running .puml files. To install the CLI, run `npm install -g pumlhorse`
 
-##Usage
+## Usage
 `pumlhorse <files_or_dirs> [-rv] [-c <context_file>] [--profile <profile_file>] [--max-concurrent <number>] [--sync]`
 
 
@@ -50,7 +51,7 @@ pass in configuration options like:
 * Number of times to run part of a test
 * Login credentials
 
-These values are then referenced like normal variables in the script. To use a context with the CLI, use the <code>-c fileName</code>
+These values are then referenced like normal variables in the script. To use a context with the CLI, use the `-c fileName`
 option. JSON (.json) and YAML (.yml) files are supported. 
 
 `pumlhorse myScript1.puml myScript.2.puml -c context_PROD.json`
@@ -67,10 +68,10 @@ Note that values will be applied in the order that context files are given. That
 All of the above CLI parameters can be packaged into a "profile". This profile is a .pumlprofile file would look something like this:
 
 ```yaml
-include: #array of .puml files and/or directories to run
+include: # array of .puml files and/or directories to run
   - file1.puml
   - scriptDir
-contexts: #array of .json or .yml files to use as the context
+contexts: # array of .json or .yml files to use as the context
   - context1.yml
   - context2.json
 recursive: <bool>
@@ -78,9 +79,9 @@ synchronous: <bool>
 maxConcurrent: <number>
 ```
 
-To pass a profile, use the --profile <profile_name> option
+To pass a profile, use the `--profile <profile_name>` option
 
 `pumlhorse --profile myProfile.pumlprofile`
 
 You can still pass additional parameters when using a profile. 
-If you pass files or directories or context files, they will be added to the profile. The -r, --sync, and --max-concurrent options will override any values in the profile
+If you pass files or directories or context files, they will be added to the profile. The `-r`, `--sync`, and `--max-concurrent` options will override any values in the profile

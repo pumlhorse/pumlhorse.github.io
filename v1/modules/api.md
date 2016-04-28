@@ -89,7 +89,9 @@ steps:
         - log: $myName
 ```
 
-When PumlHorse parses the repeat step, it should evaluate $loopTimes, but not steps. The parser sees the steps as an array of parameters to be passed to a function. The first inner step would be run again to assign 'Joseph' to myName, but the second step would have been evaluated before that assignment, so `$myName` would be undefined.
+When PumlHorse parses the repeat step, it should evaluate $loopTimes, but not steps. The parser sees the steps as an array of parameters to be 
+passed to a function. The first inner step would be run again to assign 'Joseph' to myName, but the second step would have been evaluated 
+before that assignment, so `$myName` would be undefined.
 
 ## Using Scope
 Every function call has access to the script scope via the `this` object. This contains any variables that have been set 
