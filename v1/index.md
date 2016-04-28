@@ -12,8 +12,6 @@ A `.puml` file is written in [YAML](http://www.yaml.org/) format. This should ma
 However, it has better readability due to the reduced dependency on curly braces, quotation marks, and commas.
 Instead, it uses whitespace to organize information.
 
-{:toc}
-
 ## Anatomy of a script
 
 Every script requires two things: a name, and at least one *step*. A step can be as simple as logging "Hello world!", but it can be
@@ -110,7 +108,7 @@ Often your scripts will need to verify information before continuing. This is es
 test cases, but even utility scripts may need to ensure that things are in a good state.
 For this, Pumlhorse provides a set of assertions.
 
-```yamljs
+```yaml
 name: Get login user info
 steps:
   - myUser = login:
@@ -132,7 +130,7 @@ sometimes you have tasks you need to complete before exiting the script. For exa
 some tests do some sort of data setup and tear-down. You can use the `cleanup` section for these tasks.
 They will still run in order, but they will all run (even if another cleanup task fails)
 
-```yamljs
+```yaml
 name: Run a cleanup task
 steps:
   # Data setup
