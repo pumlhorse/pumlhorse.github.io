@@ -6,6 +6,7 @@ layout: reference
 
 Pumlhorse contains functions to help with JSON-based HTTP requests.
 It supports the following methods:
+
 * `http.get`
 * `http.put`
 * `http.post`
