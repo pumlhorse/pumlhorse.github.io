@@ -29,6 +29,7 @@ function myFunc2() {
 ```
 
 Now you need to place your file someplace where pumlhorse can reach it.
+
  * If you are using an absolute or relative path, you can place it anywhere you would like
  * If you are using a node module with a single file, you can simply place it in a `node_modules` folder along the resolution path.
  * If you are using a node module with multiple files, you will need to place it in its own folder with whatever name you
@@ -42,6 +43,7 @@ Now you need to place your file someplace where pumlhorse can reach it.
    as our scripts.
 
 ### Directory structure
+
 As mentioned earlier, Pumlhorse will look at parent directories to find a node module. This allows you to
 share modules across many scripts, or limit it to a smaller set. Here is a sample directory structure.
 

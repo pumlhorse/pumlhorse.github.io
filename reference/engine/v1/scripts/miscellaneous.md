@@ -5,6 +5,7 @@ layout: reference
 # Miscellaneous functions
 
 ## Wait
+
 Pause the script for the given amount of time
 
 ```yaml

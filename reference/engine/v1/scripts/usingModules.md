@@ -18,6 +18,7 @@ steps:
 ```
 
 This would attempt to resolve "node_module_name" in the following locations:
+
 * Globally installed `node_modules` folder
 * `node_modules` folders along the `require` dependency resolution path **relative to the executing directory**
 (where `pumlhorse` was called, not where the `.puml` file lives

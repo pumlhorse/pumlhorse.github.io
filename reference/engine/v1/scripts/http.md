@@ -6,6 +6,7 @@ layout: reference
 
 Pumlhorse contains functions to help with JSON-based HTTP requests.
 It supports the following methods:
+
 * `http.get`
 * `http.put`
 * `http.post`
@@ -38,17 +39,17 @@ There is also a set of assertions for HTTP responses
 
 | Function | Description |
 | ---------------------- |
-| `http.isInformational` | Verifies that the response code is between 100 and 199 |
-| `http.isSuccess` | Verifies that the response code is between 200 and 299 |
-| `http.isRedirect` | Verifies that the response code is between 300 and 399 |
-| `http.isError` | Verifies that the response code is between 400 and 599 |
-| `http.isOk` | Verifies that the response code is 200 |
-| `http.isNotModified` | Verifies that the response code is 304 |
-| `http.isBadRequest` | Verifies that the response code is 400 |
-| `http.isUnauthorized` | Verifies that the response code is 401 |
-| `http.isForbidden` | Verifies that the response code is 403 |
-| `http.isNotFound` | Verifies that the response code is 404 |
-| `http.isNotAllowed` | verifies that the response code is 405 |
+| `http.isInformational` | Asserts that the response code is between 100 and 199 |
+| `http.isSuccess` | Asserts that the response code is between 200 and 299 |
+| `http.isRedirect` | Asserts that the response code is between 300 and 399 |
+| `http.isError` | Asserts that the response code is between 400 and 599 |
+| `http.isOk` | Asserts that the response code is 200 |
+| `http.isNotModified` | Asserts that the response code is 304 |
+| `http.isBadRequest` | Asserts that the response code is 400 |
+| `http.isUnauthorized` | Asserts that the response code is 401 |
+| `http.isForbidden` | Asserts that the response code is 403 |
+| `http.isNotFound` | Asserts that the response code is 404 |
+| `http.isNotAllowed` | Asserts that the response code is 405 |
 
 ## Examples
 
@@ -91,6 +92,7 @@ steps:
 ```
 
 ## Going further
+
 When developing tests against web APIs, you'll frequently need to support multiple environments.
 The easiest way to accomplish this is with context/profile files. You can then reference the base URL
 just like any other variable

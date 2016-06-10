@@ -3,7 +3,8 @@ title: Filters
 layout: reference
 ---
 # Filters
-Filters can handle the following events:
+
+Filters are external to individual PUML scripts and can handle the following events:
 
  - `onSessionStarting(): Promise<bool>`
    - Occurs after all files have been detected, but before any scripts have been loaded
@@ -23,6 +24,7 @@ This can be used to perform some validation on the script, or just to run extern
  - Mark test cases as passed/failed in an external system
  - Update an audit database after deployment scripts have been run 
 
-Filters are implemented as JavaScript files. They are passed in via the `profile` option in the profile page.
+Filters are implemented as JavaScript files. They are passed in through the filter option in a 
+[profile](http://pumlhorse.com/reference/engine/v1/commandLine#running-a-profile).
 
 See the `examples/filters` directory for sample implementations.
