@@ -31,7 +31,7 @@ of the script.
 After installing Node.js, run the following command:
 `npm install -g pumlhorse`
     
-See the documentation for more information
+See the [documentation](/reference/engine/v1) for more information
 
 </div>
 </div>
