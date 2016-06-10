@@ -18,10 +18,11 @@ Filters can handle the following events:
 
 As the name implies, the "starting" events can effectively cancel that event by throwing an error or returning false.
 This can be used to perform some validation on the script, or just to run external processes. Some examples:
+
  - Cancel a test case if it doesn't have `testCaseId` specified
  - Mark test cases as passed/failed in an external system
  - Update an audit database after deployment scripts have been run 
 
-Filters are implemented as javascript files. They are passed in via the `profile` option in the profile page.
+Filters are implemented as JavaScript files. They are passed in via the `profile` option in the profile page.
 
 See the `examples/filters` directory for sample implementations.

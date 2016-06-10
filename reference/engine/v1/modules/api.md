@@ -145,7 +145,8 @@ Events can be subscribed to via the 'listen' method on the script.
 accessed through the scope, but it is possible that they are stored under a custom namespace. The `$module` function ignores any 
 namespaces.
 * `$cleanup(Function)` - This method allows you to add cleanup tasks to the script. Cleanup tasks are always run, regardless of whether all steps or previous 
-cleanup tasks succeed. Cleanup tasks also have access to scope.
+cleanup tasks succeed. Cleanup tasks also have access to scope. **Note**: tasks will be added to the beginning of the list. This makes it simple to do things
+like add dependent SQL records and delete them easily (without having to involve cascading deletes)   
 
 ```javascript
 function openDbConnection(connectionString) {
@@ -156,8 +157,9 @@ function openDbConnection(connectionString) {
         connection.close();
     })
 }    
-```
+``` 
 
+* `$cleanup.push(Function)` - The same as `$cleanup()`, except the task is added to the end of the list. 
 * `$_` - Provides access to the [underscorejs](http://underscorejs.org/) helper library.
 * `$Promise` - Provides access to the [bluebirdjs](http://bluebirdjs.com/) promise library. Note that you
 are not forced to use this library for promises.
