@@ -126,7 +126,7 @@ property of `FunctionOptions`
 function runInNewScope() {
     var currentScope = this;
     currentScope.testVal = "outside scope"
-    var newScope = currentScope.$new(currentScope, {
+    var newScope = currentScope.$new({
         testVal: "inside scope"
     })
     
