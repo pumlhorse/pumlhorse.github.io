@@ -4,10 +4,34 @@ layout: reference
 ---
 # Using modules
 
-_Want to create your own custom module? See the custom modules section._
+Pumlhorse supports using external modules to complement the standard functionality. These come in two types: Node, and Pumlhorse.
+Node modules are anything you would find from [NPM](https://www.npmjs.org). They might not be fully compatible with Pumlhorse scripts 
+(for instance, they may depend on callbacks instead of Promises). Pumlhorse modules are specifically crafted to be compatible.
 
-Pumlhorse supports using external modules to complement the standard functionality.
-To use an external module, you need to reference it in the `modules` section of the script.
+## Importing a Node module
+
+Pumlhorse can import any Node module by using the `import` function and assigning it to a variable.
+
+```yaml
+name: Import Node module
+description: Import a plain Node module (not a Pumlhorse module)
+steps:
+  # Log OS information using the Node 'os' module
+  - osMod = import: os
+  - log: OPERATING SYSTEM: $osMod.type() $osMod.arch()
+  - log: CPU CORES: $osMod.cpus().length
+  - log: TOTAL MEMORY: ${ osMod.totalmem() / 1000000 } MB
+  # Import a custom Node module (examples/node_modules/plainNodeModule.js)
+  - custom = import: plainNodeModule
+  - currentDate = ${ Date() }
+  - log: $custom.getModuleInfo(currentDate)
+```
+
+## Pumlhorse Modules
+
+_Want to create your own custom module? See the [custom modules](../modules/customModules) section._
+
+To use a Pumlhorse module, you need to reference it in the `modules` section of the script.
 
 ```yaml
 name: Use my custom module

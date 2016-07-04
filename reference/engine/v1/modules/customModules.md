@@ -57,7 +57,7 @@ pumlhorse_scripts
 │   └───node_modules
 │       └───login_helpers
 │               app.js
-                library.js
+|               library.js
 │               package.json
 │
 ├───node_modules
