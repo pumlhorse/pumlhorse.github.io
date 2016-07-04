@@ -163,3 +163,4 @@ function openDbConnection(connectionString) {
 * `$_` - Provides access to the [underscorejs](http://underscorejs.org/) helper library.
 * `$Promise` - Provides access to the [bluebirdjs](http://bluebirdjs.com/) promise library. Note that you
 are not forced to use this library for promises.
+* `$id()` - Returns a unique ID, `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` where `x` is a hexidecimal value

@@ -5,8 +5,30 @@ layout: reference
 # Flow Control
 
 Many scripts are just a list of steps that run once, in order, and then the script completes.
-However, sometimes you will want to do things like loop through an array, or 
+However, sometimes you will want to do things like check a condition, loop through an array, or 
 run a series of steps multiple times.
+
+## Conditionals
+
+```yaml
+name: Simple if/then example
+functions:
+  getTodaysDate:
+    - return new Date().getDay()
+steps:
+  - dayOfWeek = $getTodaysDate()
+  - if:
+      value: ${ dayOfWeek == 5 }
+      is true:
+        - log: Congratulations, today is Friday!
+      is false:
+        - if:
+            value: ${ dayOfWeek == 6 || dayOfWeek == 0}
+            is true:
+              - log: Congratulations, it's the weekend!
+            is false:
+              - log: Hang in there, you'll make it to the weekend!
+```
 
 ## Loop through an array
 
