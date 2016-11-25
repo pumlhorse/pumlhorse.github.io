@@ -11,7 +11,7 @@ section for more information.
 
 ## Is True/False
 
-These assertions takes one parameter and fail if the value is not true (`isTrue`)
+These assertions take one parameter and fail if the value is not true (`isTrue`)
 or not false (`isFalse`).
 
 ```yaml
@@ -21,6 +21,20 @@ steps:
   - isFalse: ${Math.PI == 3} #passes
   - isTrue: ${2 + 2 == 5} #fails
   - isFalse: ${3 < 2} #fails
+```
+
+## Is (Not) Null
+
+These assertions take one parameter and fail if the value is not null (`isNull`)
+or null (`isNotNull`).
+
+```yaml
+name: Test isNull and isNotNull
+steps:
+  - isNull: $variableThatDoesntExist #passes
+  - isNotNull: this is a string that isnt null #passes
+  - isNull: 12345 #fails
+  - isNotNull: $variableThatDoesntExist #fails
 ```
 
 ## Are (Not) Equal

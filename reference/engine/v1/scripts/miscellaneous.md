@@ -4,6 +4,19 @@ layout: reference
 ---
 # Miscellaneous functions
 
+## Parallel steps
+
+Run multiple steps in parallel
+
+```yaml
+name: Run multiple steps in parallel
+steps:
+  - parallel:
+      - postUpdateToFacebook: This is my new status!
+      - postUpdateToTwitter: This is my new tweet!
+      - postUpdateToInstagram: This is a picture of my cat!
+```
+
 ## Wait
 
 Pause the script for the given amount of time
