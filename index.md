@@ -15,7 +15,7 @@ Some practical situations include:
 * DevOps support scripts
 * Load tests
     
-Pumlhorse is built on top of the powerful Node.js platform and comes with a wide array of built in features. 
+Pumlhorse is built on top of the powerful [Node.js](https://www.nodejs.org) platform and comes with a wide array of built in features. 
 It also supports custom modules. 
     
 ## Blurring the lines of DEV and QA
