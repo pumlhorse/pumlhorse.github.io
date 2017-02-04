@@ -3,6 +3,8 @@ title: Assertions
 layout: lesson
 ---
 
+## Assertions
+
 One of the key uses for Pumlhorse is writing test scripts. To facilitate this, Pumlhorse provides a set of
 basic assertions. These assertions will verify that an expectation is met and throw an error if it fails.
 

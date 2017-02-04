@@ -3,11 +3,14 @@ title: My First Pumlhorse Script
 layout: lesson
 ---
 
+## What is a script?
+
 A Pumlhorse script consists of a list of instructions, also known as _steps_. Pumlhorse runs these steps
 in order, from first to last, and will only run one at a time (with the exception of _parallel_ steps, but more on that later).
 If a step causes an error, then the script will stop and no further steps will be run.
 
 A step could:
+
 * Print a message
 * Assign a value
 * Download a file

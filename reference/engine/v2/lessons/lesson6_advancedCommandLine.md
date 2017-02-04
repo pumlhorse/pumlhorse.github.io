@@ -3,6 +3,8 @@ title: Advanced Command Line Usage
 layout: lesson
 ---
 
+## Advanced Command Line Usage
+
 Up until now we haven't done much with the Command Line Interface (CLI) except run a single file. However, the CLI
 is capable of a lot more.
 
@@ -18,12 +20,14 @@ Pumlhorse also supports _context files_. These are data files that can be access
 For instance, it's common to extract things like server names or connection strings into configuration files
 
 **context.dev.yaml**
+
 ```yaml
 urlBase: http://dev.example.org
 dbName: dev.myDatabase.name
 ```
 
 **myScript.puml**
+
 ```yaml
 name: Use data from context file
 steps:

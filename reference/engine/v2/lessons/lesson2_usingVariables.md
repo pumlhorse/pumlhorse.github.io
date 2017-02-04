@@ -3,6 +3,8 @@ title: Using Variables
 layout: lesson
 ---
 
+## Using Variables
+
 Most of the time we will want to save data and then act on it. We can save this data into variables
 and then access them later.
 
@@ -13,7 +15,7 @@ steps:
   - log: Hello, nice to you meet you. My name is $my_name
 ```
 
-Pretty simple, right? We save the value "Alan Turing" to the variable "my_name". Then when we want to access it
+Pretty simple, right? We save the value "Alan Turing" to the variable `my_name`. Then when we want to access it
 later, we reference it by putting a `$` in front of it. This is useful for steps that return a value.
 
 ```yaml
@@ -30,7 +32,7 @@ This might take a bit of unpacking. The `functions` property is new to us. It al
 For now, just know that there's a function called "get_date" that returns the current date.
 
 Notice how the syntax looks very similar to the previous script? Pumlhorse is smart enough to know that "Alan Turing" is just a value,
-but "get_date" is a function that should be called. It returns the current date and is stored in the variable `right_now`.
+but `get_date` is a function that should be called. It returns the current date and is stored in the variable `right_now`.
 
 What if we want to use more complex values than just strings?
 

@@ -3,6 +3,8 @@ title: HTTP Functions
 layout: lesson
 ---
 
+## HTTP Functions
+
 One of the primary reasons for creating Pumlhorse was to easily interact with web-based APIs. Thus Pumlhorse
 comes with HTTP functions baked in. These functions provide the ability to perform web requests (GET, POST, PUT, etc.)
 and to interact with the responses.
@@ -61,4 +63,4 @@ steps:
         Authorization: Basic cHVtbGhvcnNlOmh1bnRlcjI=
 ```
 
-See the HTTP module reference for all the available functions
+See the [HTTP module reference](../functions/http) for all the available functions
