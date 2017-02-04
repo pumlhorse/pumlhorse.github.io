@@ -3,6 +3,8 @@ title: Scope schema
 layout: referencev2
 ---
 
+## Using Scope
+
 Each function call in a script has access to a `scope` item. The scope is where 
 variables are stored. When you run `username = jsmith`, that sets the `username` property
 on the scope to "jsmith".
