@@ -3,6 +3,8 @@ title: Assertions
 layout: functionv2
 ---
 
+## Assertions
+
 The following assertion functions allow you to validate your data. If an assertion fails, the script will stop.
 
 ## `isTrue`

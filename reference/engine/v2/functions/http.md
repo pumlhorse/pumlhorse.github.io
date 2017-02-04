@@ -1,7 +1,9 @@
 ---
-title: HTTP functions
+title: HTTP Functions
 layout: functionv2
 ---
+
+## HTTP Functions
 
 All HTTP functions are contained in the `http` namespace, thus they are prefixed with the notation `http.`.
 
@@ -9,20 +11,13 @@ All HTTP functions are contained in the `http` namespace, thus they are prefixed
 
 The following functions perform HTTP requests and return responses. 
 
-`get`
-
-`post`
-
-`put`
-
-`delete`
-
-`patch`
-
-`options`
-
-`head`
-
+* `get`
+* `post`
+* `put`
+* `delete`
+* `patch`
+* `options`
+* `head`
 
 All functions take the same parameters
 
@@ -133,4 +128,5 @@ Function | Valid code(s)
 ```yaml
 - response = http.get: http://www.example.org/missingPage
 - http.isNotFound: $response
+- log: Verified response was a 404
 ```
