@@ -126,7 +126,8 @@ Occasionally you will want to stop the script without having to throw an error.
 name: Exit early
 steps:
   - log: nothing to do!
-  - $end
+  - end
+  - log: this step never runs
 ```
 
 ## Cleaning up
