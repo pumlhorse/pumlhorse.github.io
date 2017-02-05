@@ -1,7 +1,9 @@
 ---
-title: Profile file schema
+title: Profile File Schema
 layout: referencev2
 ---
+
+# Profile File Schema
 
 This is the schema for Pumlhorse profile files (`.pumlprofile`). Profile files are in YAML format.
 
