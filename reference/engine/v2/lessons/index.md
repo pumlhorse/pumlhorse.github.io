@@ -1,7 +1,9 @@
 ---
-title: Getting Started
+title: Pumlhorse Lessons
 layout: lesson
 ---
+
+# Pumlhorse Lessons
 
 These lessons are designed to help show you the power of Pumlhorse.
 
