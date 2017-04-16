@@ -3,6 +3,8 @@ title: Getting Started
 layout: lesson
 ---
 
+# Getting Started
+
 ## Installing Pumlhorse
 
 The first step to using Pumlhorse is installing it. If you haven't already, download and install 

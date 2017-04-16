@@ -3,7 +3,7 @@ title: My First Pumlhorse Script
 layout: lesson
 ---
 
-## What is a script?
+# What is a script?
 
 A Pumlhorse script consists of a list of instructions, also known as _steps_. Pumlhorse runs these steps
 in order, from first to last, and will only run one at a time (with the exception of _parallel_ steps, but more on that later).
@@ -71,11 +71,9 @@ steps:
   - error: No error, I just like red text
 ```
 
-Now our script has three steps that output text. `warn` will output in yellow text and `error` text will be red. Calling `error` will not
-stop the script from running.
+Now our script has three steps that output text. `warn` will output in yellow text and `error` text will be red. Calling `error` will not stop the script from running.
 
-What if we want to add more information to a script? Maybe a name isn't enough detail. Well, we can add a `description` to the script too.
-In fact, we can add any property we want.
+What if we want to add more information to a script? Maybe a name isn't enough detail. Well, we can add a `description` to the script too. In fact, we can add any property we want.
 
 ```yaml
 name: My first Pumlhorse script

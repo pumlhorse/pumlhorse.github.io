@@ -35,5 +35,7 @@ Get all RESTful with Pumlhorse's built-in HTTP functions.
 
 Advanced features of the Command Line Interface. Learn how to use contexts and profiles for powerful and flexible scripts.
 
+### [Chapter 7 - Setting Up a Project](./lesson_settingUpAProject)
 
+Tips for organizing your test scripts, context files, modules, and profiles.
 

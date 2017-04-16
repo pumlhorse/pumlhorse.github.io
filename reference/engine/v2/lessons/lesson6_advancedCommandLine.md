@@ -16,29 +16,12 @@ is capable of a lot more.
 
 ## Run with a given set of data
 
-Pumlhorse also supports _context files_. These are data files that can be accessed by scripts.
-For instance, it's common to extract things like server names or connection strings into configuration files
+Pumlhorse also supports [context files](../context.md). These are data files that can be accessed by scripts.
+For instance, it's common to extract things like server names or connection strings into configuration files.
 
-**context.dev.yaml**
+To run a script with a context file, use the `-c <context_file_name>` switch: `pumlhorse myScript.puml -c context.dev.yaml`
+Conceivably, you would have separate `context.*.yaml` files for other environments.
 
-```yaml
-urlBase: http://dev.example.org
-dbName: dev.myDatabase.name
-```
-
-**myScript.puml**
-
-```yaml
-name: Use data from context file
-steps:
-  - response = http.get: $urlBase/myEndpoint
-  - connectToDatabase: $dbName
-```
-
-We can then run this (hypothetical) script with the context file: `pumlhorse myScript.puml -c context.dev.yaml`
-Conceivably, you would have separate context.*.yaml files for other environments.
-
-If you prefer, context files can also be in JSON format.
 
 ## Script queueing
 

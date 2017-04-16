@@ -93,5 +93,46 @@ Runs multiple steps "concurrently".
     - getPhoneNumberForUser: $userId
 ```
 
-Of course, it's important to remember that JavaScript (which Pumlhorse runs on) is single-threaded.
-Thus, the steps will only appear to run concurrently if there is some sort of thread suspension, like I/O.
+Of course, it's important to remember that JavaScript (which Pumlhorse runs on) is single-threaded. Thus, the steps will only appear to run concurrently if there is some sort of thread suspension, like I/O.
+
+## `run`
+
+Runs another Pumlhorse script.
+
+```yaml
+- run: anotherScript.puml
+# Pass parameters to the script
+- run:
+    script: logUserIn.puml
+    with:
+      username: jsmith
+      password: hunter2
+```
+
+This function can come in handy for building reusable components. In the example above, `logUserIn.puml` could be used across many scripts that need to log a user in.
+
+You can also assign the result of another script to a variable.
+
+**addNumbers.puml**
+```yaml
+name: Add two numbers
+expect:
+  - number1
+  - number2
+steps:
+  - sum = add:
+      - $number1
+      - $number2
+```
+
+**myScript.puml**
+```yaml
+name: My script
+steps:
+  - addNumbersResult = run:
+      script: addNumbers.puml
+      with:
+        number1: 43
+        number2: 11
+  - log: 43 + 11 = $addNumbersResult.sum
+```

@@ -7,7 +7,9 @@ layout: referencev2
 
 Each function call in a script has access to a `scope` item. The scope is where 
 variables are stored. When you run `username = jsmith`, that sets the `username` property
-on the scope to "jsmith".
+on the `scope` to "jsmith".
+
+To access the `scope`, your function just needs to include a `$scope` parameter. From there you can get or set scope values.
 
 ## Variables
 
@@ -15,8 +17,7 @@ Some variables are automatically set on a scope.
 
 ### `scriptId`
 
-When Pumlhorse runs, it assigns each script a Universally/Globally Unique Identifier (UUID/GUID). This is used to correlate events back
-to the script. A script's ID changes every time it is run.
+When Pumlhorse runs, it assigns each script a Universally/Globally Unique Identifier (UUID/GUID). This is used to correlate events back to the script. A script's ID changes every time it is run.
 
 ```yaml
 - log: Script ID is: $scriptId
@@ -38,7 +39,7 @@ You could also call it like so:
 
 ```yaml
 - myId = _id
-- log: $myId
+- log: $myId # logs something like "4396d060-d836-4069-bbf5-77b32ac4e35f"
 ```
 
 ### `end`
@@ -60,31 +61,33 @@ that can be called from a script.
 
 This function creates a new scope based off of the current scope. Consider the following pseudocode:
 
-```
-var currentScope = scope;
-currentScope.x = 42;
-currentScope.obj = { val: 'hello!'};
-log(currentScope); // Logs { x: 42, obj: { val: 'hello!' } }
-var newScope = currentScope._new();
-newScope.x = 11;
-newScope.y = 99;
-newScope.obj.val = 'goodbye!';
-log(newScope); // Logs { x: 11, y: 99, obj: { val: 'goodbye!' } }
-log(currentScope); // Logs { x: 42, obj: { val: 'goodbye!' } }
+```javascript
+function myFunction($scope) {
+    $scope.x = 42;
+    $scope.obj = { val: 'hello!'};
+    log(currentScope); // Logs { x: 42, obj: { val: 'hello!' } }
+    var newScope = $scope._new();
+    newScope.x = 11;
+    newScope.y = 99;
+    newScope.obj.val = 'goodbye!';
+    log(newScope); // Logs { x: 11, y: 99, obj: { val: 'goodbye!' } }
+    log($scope); // Logs { x: 42, obj: { val: 'goodbye!' } }
+}
 ```
 
-As you can see, the shallow changes to the scope (changing `x`, adding `y`) do not apply to `currentScope`.
-However, changes to nested objects (like `obj.val`) _do_ apply to `currentScope`.
+As you can see, the shallow changes to the scope (changing `x`, adding `y`) do not apply to `$scope`.
+However, changes to nested objects (like `obj.val`) _do_ apply to `$scope`.
 
 You can also specify data to be added to the new scope, analogous to a "stack" in programming languages.
 
-```
-var currentScope = scope;
-currentScope.x = 42;
-log(currentScope); // Logs { x: 42 }
-var newScope = currentScope._new({x: 11, y: 99});
-log(newScope); // Logs { x: 11, y: 99 }
-log(currentScope); // Logs { x: 42 }
+```javascript
+function myFunc($scope) {
+    $scope.x = 42;
+    log($scope); // Logs { x: 42 }
+    var newScope = $scope._new({x: 11, y: 99});
+    log(newScope); // Logs { x: 11, y: 99 }
+    log($scope); // Logs { x: 42 }
+}
 ```
 
 ### `_runSteps(steps: Step[])`

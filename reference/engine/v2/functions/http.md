@@ -63,6 +63,35 @@ you can use the following single-line shortcut:
 - http.get: http://www.example.org
 ```
 
+### `setDefaultHeaders`
+
+This function allows you to set default headers for all HTTP requests in a script.
+
+```yaml
+- http.setDefaultHeaders:
+    X-MyHeader: my header value
+    AnotherHeader: another header value
+```
+
+### `setAuthorization`
+
+Sets the authorization for all HTTP requests in a script.
+
+```yaml
+- http.setAuthorization: Basic cHVtbGhvcnNlOmh1bnRlcjI= 
+```
+
+### `setBasicAuthorization`
+
+Sets a username/password authorization for all HTTP requests in a script.
+
+```yaml
+- http.setBasicAuthorization:
+    username: jsmith
+    password: hunter2
+```
+
+
 ## Response functions
 
 The above functions will return an object containing response data. The following functions interact
@@ -101,8 +130,17 @@ bodyAsString = $response.body
 The `body` function is really just a helper for the following calls:
 
 ```yaml
-- response = http.get: http://www.example.org/myUser
+- response = http.get: https://www.example.org/myUser
 - body = fromJson: $response.body
+```
+
+### `dump`
+
+Logs details about the response. Prints the response status code, status message, headers, and body
+
+```yaml
+- response = http.get: https://www.example.org/myUser
+- http.dump: $response
 ```
 
 ### Response Code Assertions

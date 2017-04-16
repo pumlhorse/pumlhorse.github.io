@@ -3,7 +3,7 @@ title: Using Variables
 layout: lesson
 ---
 
-## Using Variables
+# Using Variables
 
 Most of the time we will want to save data and then act on it. We can save this data into variables
 and then access them later.
