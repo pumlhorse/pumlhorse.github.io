@@ -134,15 +134,6 @@ The `body` function is really just a helper for the following calls:
 - body = fromJson: $response.body
 ```
 
-### `dump`
-
-Logs details about the response. Prints the response status code, status message, headers, and body
-
-```yaml
-- response = http.get: https://www.example.org/myUser
-- http.dump: $response
-```
-
 ### Response Code Assertions
 
 The following functions are assertions for the HTTP response code. If the response's code
