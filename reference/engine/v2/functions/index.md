@@ -15,6 +15,18 @@ Perform assertions on variables
 
 Ifs, loops, and all sorts of fun stuff!
 
+### [Logging](./log)
+
+Debug, log, warning, and error messages
+
 ### [HTTP Functions](./http)
 
-Easy HTTP calls
+Make HTTP requests and handle responses
+
+### [Math](./math)
+
+Basic math functions
+
+### [Miscellaneous](./misc)
+
+Miscellaneous functions
